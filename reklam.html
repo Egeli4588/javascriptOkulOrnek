@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="reklamEtkilesim()">
+    
+
+<div id="reklam">
+<img src="tanitim.jpg">
+</div>
+<script>  
+    function reklamEtkilesim(){
+      setTimeout(function(){
+             document.getElementById("reklam").style.display="none";
+      }, 10000);  // 10000 milisaniye = 10 
+}
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      GÜN : <input type="text" id="gungiris"> <button onclick="Giris()">GİRİŞ</button>
+      <h2 id="sonucyaz">?????</h2>
+
+      <script>
+
+            function Giris()
+            {
+                  var g=document.getElementById("gungiris").value;
+          
+ 
+                  switch(g)
+                  {
+                        case "1" : document.getElementById("sonucyaz").innerHTML="PAZARTESİ"; break;
+                        case "2" : document.getElementById("sonucyaz").innerHTML="SALI"; break;
+                        case "3" : document.getElementById("sonucyaz").innerHTML="ÇARŞAMBA"; break;
+                        case "4" : document.getElementById("sonucyaz").innerHTML="PERŞEMBE"; break;
+                        case "5" : document.getElementById("sonucyaz").innerHTML="CUMA"; break;
+                        case "6" : document.getElementById("sonucyaz").innerHTML="CUMRATESİ"; break;
+                        case "7" : document.getElementById("sonucyaz").innerHTML="PAZAR"; break;
+                        default: document.getElementById("sonucyaz").innerHTML="HATALI GİRİŞ"; break;
+
+                  }
+            }
+
+            var sehirler =["Adana","Adıyaman", "Afyon", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin",
+            "Aydın", "Balıkesir","Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale",
+            "Çankırı", "Çorum","Denizli","Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum ", "Eskişehir",
+            "Gaziantep", "Giresun","Gümüşhane", "Hakkari", "Hatay", "Isparta", "Mersin", "İstanbul", "İzmir",
+            "Kars", "Kastamonu", "Kayseri","Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya ", "Malatya",
+            "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya",
+            "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon  ", "Tunceli", "Şanlıurfa", "Uşak",
+            "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt ", "Karaman", "Kırıkkale", "Batman", "Şırnak",
+            "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük ", "Kilis", "Osmaniye ", "Düzce"];
+           
+
+      </script>
+</body>
+</html>
