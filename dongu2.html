@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="renkler.js"></script>
-    <style>
-        div{
-            width: 20px;
-            height: 20px;
-            border: 2px solid gray;
-            margin: 2px;
-            text-align: center;
-            float: left;
-        }
-    </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
 </head>
 <body>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-    <div>8</div>
-    <input type="button" onclick="renkDegistir()" value="Renkleri Değiştir" >
+      <h2>DÖNGÜLER İLE ÇALIŞMA</h2>
+      Adet : <input type="text" id="sayi"> <button onclick="Ekle()">EKLE</button>
+      <p id="yazi"></p>
+      
+
+
+      <script>
+
+      function Ekle()
+      {
+            document.getElementById("yazi").innerHTML="";
+            var adet=document.getElementById("sayi").value;
+            for(i=1;i<=adet;i++) //alt alta 10 defa belirtilen özelliklerde çizgi ekler
+      {
+            document.getElementById("yazi").innerHTML+="<hr width='800' align='left' size='5' color='red'>";
+
+      }
+
+      }
+
+    
+
+
+      </script>
 </body>
 </html>
