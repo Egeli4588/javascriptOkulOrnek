@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .kutu{
+                  width: 50%;
+                  height: 50px;
+                  border: 2px solid black;
+                  border-bottom-left-radius: 20px;
+                  border-bottom-right-radius: 20px;
+                  position: absolute;
+                  left: 25%;
+                  top: 0px;
+                  text-align: center;
+                  line-height: 50px;
+                  font-size: 24px;
+                  font-weight: bolder;
+                  background-color: green;
+                  color: white;
+            }
+      </style>
+</head>
+<body>
+      <h1>ZAMANLAMA FONKSİYONLARI</h1>
+      <div class="kutu" id="yenikutu"> DERSİMİZE HOŞGELDİNİZ</div>
+
+      <script>
+         //setTimeout fonksiyonu ile belli süre sonra bir defa çalışacak olan çalışma
+         document.getElementById("yenikutu").style.display="none";
+
+
+         function Goster()
+         {
+            document.getElementById("yenikutu").style.display="block";
+            setTimeout(Gizle,7000);//burada gizle fonksiyonu çağrılıyor
+         }
+
+         function Gizle()
+         {
+            document.getElementById("yenikutu").style.display="none";
+         }
+         setTimeout(Goster,2000);
+
+         setTimeout(()=>{
+
+            alert("merhaba")
+         },15000);
+        
+        
+      </script>
+      
+</body>
+</html>

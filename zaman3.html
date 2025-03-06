@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         .ortala{
+            width: 50%;
+            margin: auto;
+         }
+      </style>
+</head>
+<body>
+      <h1 >ZAMANLAMA FONKSİYONLARI  </h1>
+      <h2 id="yaz"> </h2>
+         <div id="ekran" style="display:none;" class="ortala">
+             <video width="800" height="600" controls autoplay>
+          <source src="ahmetHoca.mp4" type="video/mp4">
+         Tarayıcınız video etiketini desteklemiyor.
+         </div> 
+
+
+
+      <script>
+         //setInterval fonksiyonu ile belli süre sonra sürekli çalışacak olan çalışma
+        /* var i=10,sayac;
+         document.getElementById("ekran").style.display="none";*/
+
+       /*  function Mesaj()
+         {
+            alert("Günaydın");
+            i++;//i =i+1
+            if(i>4) clearInterval(sayac);
+         }
+         sayac=setInterval(Mesaj,2000);
+        */
+       /*  function Say()
+         {
+            document.getElementById("yaz").innerHTML="Sayaç : "+i;
+            i--;
+            if(i<0)
+            document.getElementById("ekran").style.display="block";
+            clearInterval(sayac);
+
+         }
+         sayac=setInterval(Say,1000);
+         */
+        
+        // 10 dan geri sayıp videoyu ekrana açan js uygulaması    
+        var i = 10;
+        var sayac = setInterval(Say, 1000);
+
+        function Say() {
+            document.getElementById("yaz").innerHTML = "Sayaç : " + i;
+            i--;
+            if (i < 0) {
+                document.getElementById("ekran").style.display = "block";
+                document.getElementById("yaz").style.display="none";
+                clearInterval(sayac);
+            }
+        }
+      
+
+        
+      </script>
+      
+</body>
+</html>

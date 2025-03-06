@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <h1>Zaman Sayacı</h1>
+      <h2 id="sayac">??</h2>
+      <button onclick="Baslat()">BAŞLAT</button>
+      <button onclick="Durdur()">DURDUR</button>
+      <button onclick="Sifirla()">SIFIRLA</button>
+
+      <script>
+            var sn=0,dk=0,saat=0,kontrolcu;
+            document.getElementById("sayac").innerHTML=saat+" : "+dk+" : "+sn;
+            function Say()
+            {
+                  sn++;
+                  if(sn>59)
+                      {
+                        sn=0;
+                        dk++;
+                        if(dk>59)
+                              {
+                               dk=0;
+                               saat++;
+                                      }
+                       }
+                  document.getElementById("sayac").innerHTML=saat+" : "+dk+" : "+sn;
+
+            }
+
+            function Baslat(){ kontrolcu=setInterval(Say,1000); }
+            function Durdur(){ clearInterval(kontrolcu); }
+            function Sifirla(){ 
+                  sn=0;
+                  dk=0;
+                  saat=0;
+                  document.getElementById("sayac").innerHTML=saat+" : "+dk+" : "+sn;
+             }
+          
+           
+      </script>
+</body>
+</html>

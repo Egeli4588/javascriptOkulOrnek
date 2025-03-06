@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .kutu{
+                  width: 800px;
+                  height: 150px;
+                  border: 2px solid black;
+                  border-radius: 10px;
+            }
+      </style>
+</head>
+<body>
+      <h1>ZAMANLAMA FONKSİYONLARI</h1>
+      <div class="kutu" id="yenikutu"></div>
+      <div class="kutu" id="reklam">Bu alanda reklam gösterilecek</div>
+      <script>
+         //setTimeout fonksiyonu ile belli süre sonra bir defa çalışacak olan çalışma
+         function Renkver()
+         {
+            document.getElementById("yenikutu").style.backgroundColor="aqua";
+            //alert("Fonksiyon çalıştı renklendirme başarılı...")
+         }
+        setTimeout(Renkver,1000);
+        function Kaybet()
+        {
+           document.getElementById("reklam").style.display="none";
+        }
+        setTimeout(Kaybet,2000);
+      </script>
+      
+</body>
+</html>

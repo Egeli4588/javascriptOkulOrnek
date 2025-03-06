@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .kutu{
+                  width: 60px;
+                  height: 60px;
+                  border: 2px solid black;
+                  border-radius: 10px;
+                  line-height: 60px;
+                  font-weight: bold;
+                  position: absolute;
+                  text-align: center;
+                   /*  %0 -  %96*/
+                   /*  %10 -  %92*/
+            }
+
+      </style>
+</head>
+<body>
+      <h2 style="text-align: center;">KUTU TIKLAMA OYUNU</h2>
+      <h3 id="yazi"></h3>
+      <p id="sonuc">
+      </p>
+    
+      <script>
+      var i=40,sayac,puan=0;
+       function Say()
+         {
+            var x=0,y=0,rs;
+            x=Math.floor(Math.random()*96);
+            y=Math.floor(Math.random()*92+10);
+            rs=Math.floor(Math.random()*2+1);
+
+            document.getElementById("yazi").innerHTML="Kalan : "+i+" Puan : "+puan;
+            if(rs==1)
+                    {
+            document.getElementById("sonuc").innerHTML="<div onclick='Tikla(1)' class='kutu' style='background-color: green; color: white; left: "+x+"%; top: "+y+"%;'> BAS</div>";
+
+                    }
+            else
+                {
+                 document.getElementById("sonuc").innerHTML="<div onclick='Tikla(2)' class='kutu' style='background-color: red; color: black; left: "+x+"%; top: "+y+"%;'> BASMA</div>";
+                }
+            
+
+            i--;
+            if(i<0) clearInterval(sayac);
+         }
+         sayac=setInterval(Say,1000);
+
+         function Tikla(a)
+         {
+            if(a==1)
+         {
+            puan+=5;
+         }
+         else{
+            puan-=3;
+         }
+         }
+
+
+
+      </script>
+</body>
+</html>
