@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <table>
+            <tr>
+                  <td>1. NOT</td>
+                  <td><input type="text" id="nt1"></td>
+            </tr>
+            <tr>
+                  <td>2. NOT</td>
+                  <td><input type="text" id="nt2"></td>
+            </tr>
+            <tr>
+                  <td>3. NOT</td>
+                  <td><input type="text" id="nt3"></td>
+            </tr>
+            <tr>
+                  <td colspan="2" align="center"> <button style="width: 150px;" onclick="Hesapla()">HESAPLA</button></td>
+                  
+            </tr>
+      </table>
+      
+      <h3 id="yaz"></h3>
+
+      <script>
+
+            function Hesapla(){
+                  
+                  var n1=Number(document.getElementById("nt1").value);
+                  var n2=Number(document.getElementById("nt2").value);
+                  var n3=Number(document.getElementById("nt3").value);
+                  var ort=(n1+n2+n3)/3.0;
+                  if(ort<50) document.getElementById("yaz").innerHTML="Ortalamanız : "+ort+" KALDINIZ";
+                  else document.getElementById("yaz").innerHTML="Ortalamanız : "+ort+" GEÇTİNİZ";
+                 
+
+
+            }
+
+      </script>
+</body>
+</html>

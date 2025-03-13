@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <table>
+            <tr>
+                  <td>AD SOYAD</td>
+                  <td><input type="text" id="adi"></td>
+            </tr>
+            <tr>
+                  <td>ÇALIŞMA YILI</td>
+                  <td><input type="text" id="cyil"></td>
+            </tr>
+            <tr>
+                  <td>MAAŞ</td>
+                  <td><input type="text" id="maas"></td>
+            </tr>
+            <tr>
+                  <td colspan="2" align="center"> <button style="width: 150px;" onclick="Hesapla()">HESAPLA</button></td>           
+            </tr>
+      </table>
+      
+      <h3 id="yaz"></h3>
+
+      <script>
+
+            function Hesapla(){
+                  var ad=document.getElementById("adi").value;
+                  var cs=Number(document.getElementById("cyil").value);
+                  var ms=Number(document.getElementById("maas").value);
+                  var zam=0;
+                  if(cs<=5) zam=ms*1.10;
+                  else if(cs<=10) zam=ms*1.15;
+                  else zam=ms*1.25;
+                 
+         
+            document.getElementById("yaz").innerHTML="Sayın : "+ad+" Maaşınız : "+zam+" TL";
+           
+
+
+            }
+
+      </script>
+</body>
+</html>

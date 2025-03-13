@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <h3> KARANLIK MOD İLE KULLANMAK İSTER MİSİNİZ?</h3>
+      <h2><input type="radio" name="rad" id="karanlik">EVET</h2>
+      <h2><input type="radio" name="rad" id="aydinlik">HAYIR</h2>
+      <td colspan="2" align="center"> <button style="width: 150px;" onclick="Giris()">GİRİŞ</button>
+     
+      <h3 id="yaz"></h3>
+
+      <script>
+
+            function Giris(){
+                  
+                 if(document.getElementById("karanlik").checked==true)
+                 {
+                  document.getElementsByTagName("body")[0].style.backgroundColor="black";
+                  document.getElementsByTagName("body")[0].style.color="white";
+
+                 }
+                 else
+                 {
+                  document.getElementsByTagName("body")[0].style.backgroundColor="white";
+                  document.getElementsByTagName("body")[0].style.color="black";
+
+                 }
+
+                
+
+            }
+
+      </script>
+</body>
+</html>

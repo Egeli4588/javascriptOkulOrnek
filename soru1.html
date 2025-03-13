@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <table>
+            <tr>
+                  <td>1. SAYI</td>
+                  <td><input type="text" id="giris1"></td>
+            </tr>
+            <tr>
+                  <td>2. SAYI</td>
+                  <td><input type="text" id="giris2"></td>
+            </tr>
+            <tr>
+                  <td colspan="2" align="center"> <button style="width: 150px;" onclick="Ekle()">Ekle</button></td>
+                  
+            </tr>
+      </table>
+      
+      <h3 id="yaz"></h3>
+
+      <script>
+
+            function Ekle(){
+                  var s1=Number(document.getElementById("giris1").value);
+                  var s2=Number(document.getElementById("giris2").value);
+                  var toplam=0;
+                  for(i=s1;i<=s2;i++)
+            {
+                  document.getElementById("yaz").innerHTML+=i+"<br>";
+                  toplam+=i;
+                 
+            }
+            document.getElementById("yaz").innerHTML+="Toplam : "+toplam;
+           
+
+
+            }
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      SAYI : <input type="text" id="giris">  <button onclick="Hesap()">HESAPLA</button>
+      <h3 id="yaz"></h3>
+
+      <script>
+
+            function Hesap(){
+                  var sayi=Number(document.getElementById("giris").value);
+                 
+                  var carp=1;
+                  for(i=1;i<=sayi;i++)
+            {
+                  carp*=i;
+                 
+            }
+            document.getElementById("yaz").innerHTML=sayi+"! = "+carp;
+           
+
+
+            }
+
+      </script>
+</body>
+</html>

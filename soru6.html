@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <table>
+            <tr>
+                  <td>1. SAYI</td>
+                  <td><input type="text" id="say1"></td>
+            </tr>
+            <tr>
+                  <td>2. SAYI</td>
+                  <td><input type="text" id="say2"></td>
+            </tr>
+            <tr>
+                  <td>İŞLEM SEÇ</td>
+                  <td>
+                        <select name="" id="sec" style="width: 150px;">
+                              <option value="topla">TOPLA</option>
+                              <option value="cikar">ÇIKAR</option>
+                              <option value="carp">ÇARP</option>
+                              <option value="bol">BÖL</option>
+                        </select>            
+                  </td>
+            </tr>
+            <tr>
+                  <td colspan="2" align="center"> <button style="width: 150px;" onclick="Hesapla()">HESAPLA</button></td>                
+            </tr>
+      </table>    
+      <h3 id="yaz"></h3>
+      <script>
+            function Hesapla(){
+                  
+                  var s1=Number(document.getElementById("say1").value);
+                  var s2=Number(document.getElementById("say2").value);
+                  var secim=document.getElementById("sec").value;
+                  var sn=0;
+
+                 if(secim=="topla") sn=s1+s2;
+                 else if(secim=="cikar") sn=s1-s2;
+                 else if(secim=="carp") sn=s1*s2;
+                 else if(secim=="bol") sn=s1/s2;
+
+                 document.getElementById("yaz").innerHTML="Sonuç : "+sn;
+
+            }
+
+      </script>
+</body>
+</html>

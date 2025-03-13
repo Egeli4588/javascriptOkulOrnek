@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+
+      
+      <h3 id="yaz"></h3>
+
+      <script>
+    var s=10,say;
+    function Sayac()
+    {
+     document.getElementById("yaz").innerText="Sayaç : "+s;
+     s--;
+     if(s<0) clearInterval(say);
+    }
+     say= setInterval(Sayac,1000);
+
+      </script>
+</body>
+</html>

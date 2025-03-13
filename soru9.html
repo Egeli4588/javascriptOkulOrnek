@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <table>
+            <tr>
+                  <td>AD SOYAD: <input type="text" id="ad"></td>
+                  <td> <button style="width: 150px;" onclick="Ekle()">Ekle</button></td>
+            </tr>
+            <tr>
+                  <td>ARANAN <input type="text" id="aranan"></td>
+                  <td> <button style="width: 150px;" onclick="Ara()">ARA</button></td>         
+            </tr>   
+      </table>
+      
+      <h3 id="yaz"></h3>
+
+      <script>
+
+      var liste=[];
+        function Ekle()
+        {
+            var isim =document.getElementById("ad").value;
+            if(isim!="")
+            liste.push(isim);
+            document.getElementById("ad").value="";
+            document.getElementById("ad").focus();
+        }
+
+        function Ara()
+        {
+            var ara=document.getElementById("aranan").value;
+            var bul=liste.indexOf(ara);
+            if(bul>=0) document.getElementById("yaz").innerHTML="Aranan "+(bul+1)+". sırada bulundu.";
+            else document.getElementById("yaz").innerHTML="Aranan Bulunamadı";
+
+
+            
+        }
+
+      </script>
+</body>
+</html>
